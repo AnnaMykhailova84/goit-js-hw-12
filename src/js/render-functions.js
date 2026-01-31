@@ -2,6 +2,8 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector('.gallery');
+
+const loadMoreBtn = document.querySelector('.load-more');
 const loader = document.querySelector('.loader');
 
 const lightbox = new SimpleLightbox('.gallery a', {
@@ -50,4 +52,21 @@ export function showLoader() {
 
 export function hideLoader() {
   loader.classList.add('hidden');
+}
+
+export function showLoadMoreBtn() {
+  loadMoreBtn.classList.remove('hidden');
+}
+
+export function hideLoadMoreBtn() {
+  loadMoreBtn.classList.add('hidden');
+}
+
+export function scrollPage() { 
+  const cardEl = gallery.querySelector('li');
+  let cardHeight = cardEl.getBoundingClientRect().height * 2;
+  window.scrollBy({ 
+  top: cardHeight,
+  behavior: "smooth",
+  });
 }

@@ -20,16 +20,17 @@
     padding-left: 4px;
   }
 
-  button[type='submit'] {
-    height: 40px;
-    padding: 4px 10px;
-    border: 0px;
-    font-size: 14px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #4e75ff;
-    color: #fff;
-  }
+}
+button,
+button[type='submit'] {
+  height: 40px;
+  padding: 4px 10px;
+  border: 0px;
+  font-size: 14px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #4e75ff;
+  color: #fff;
 }
 
 .gallery {
